@@ -8,6 +8,8 @@ function App() {
     if(num >= 0 && num <= 100){
       setNum(num + 2); 
     }
+  const multiple = () => {
+    setNum(num * 2);
   };
 
   return (
@@ -18,7 +20,7 @@ function App() {
       <div className="calculate">
         <button onClick={handleAdd}>+</button>
         <button>-</button>
-        <button>*</button>
+        <button onClick={multiple}>*</button>
         <button>/</button>
       </div>
     </div>
