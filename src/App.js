@@ -3,14 +3,28 @@ import "./App.css";
 
 function App() {
   const [num, setNum] = useState(0);
-
+  
   const multiple = () => {
     if (num > 0 && num <= 50) {
       setNum(num * 2);
     } else {
       alert("*버튼을 실행할 수 없습니다.");
     }
+
+
+  const handleAdd = () => {
+    if(num >= 0 && num <= 100){
+      setNum(num + 2); 
+    }
+  }
+
+  const handleDivide = () => {
+    if (num <= 0) return;
+    else if (num > 100) return;
+    const newNum = num / 2;
+    setNum(newNum);
   };
+
 
   return (
     <div className="App">
@@ -18,13 +32,12 @@ function App() {
         <p>{num}</p>
       </div>
       <div className="calculate">
-        <button>+</button>
+        <button onClick={handleAdd}>+</button>
         <button>-</button>
-        <button onClick={multiple}>*</button>
-        <button>/</button>
+        <button>x</button>
+        <button onClick={handleDivide}>/</button>
       </div>
     </div>
   );
 }
-
 export default App;
