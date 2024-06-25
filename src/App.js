@@ -5,7 +5,7 @@ function App() {
   const [num, setNum] = useState(0);
 
   const multiple = () => {
-    if (num > 0 && num < 50) {
+    if (num > 0 && num <= 50) {
       setNum(num * 2);
     } else {
       alert("*버튼을 실행할 수 없습니다.");
