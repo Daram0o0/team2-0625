@@ -4,7 +4,8 @@ import "./App.css";
 function App() {
   const [num, setNum] = useState(0);
   const handleMinus = () => {
-    setNum(num - 2);
+    if (0 <= num - 2 && num - 2 <= 100) setNum(num - 2);
+    else alert("더 이상 연산할 수 없습니다.");
   };
 
   return (
