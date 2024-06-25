@@ -4,6 +4,13 @@ import "./App.css";
 function App() {
   const [num, setNum] = useState(0);
 
+
+  const handleAdd = () => {
+    if(num >= 0 && num <= 100){
+      setNum(num + 2); 
+    }
+  }
+
   const handleDivide = () => {
     if (num <= 0) return;
     else if (num > 100) return;
@@ -11,13 +18,14 @@ function App() {
     setNum(newNum);
   };
 
+
   return (
     <div className="App">
       <div>
         <p>{num}</p>
       </div>
       <div className="calculate">
-        <button>+</button>
+        <button onClick={handleAdd}>+</button>
         <button>-</button>
         <button>x</button>
         <button onClick={handleDivide}>/</button>
@@ -25,5 +33,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
