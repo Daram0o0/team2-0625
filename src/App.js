@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [num, setNum] = useState(0);
+  const [num, setNum] = useState(50);
 
   const handleMinus = () => {
     if (0 <= num - 2 && num - 2 <= 100) setNum(num - 2);
@@ -10,7 +10,7 @@ function App() {
   };
 
   const multiple = () => {
-    if (num > 0 && num <= 50) {
+    if (num * 2 > 0 && num * 2 <= 100) {
       setNum(num * 2);
     } else {
       alert("*버튼을 실행할 수 없습니다.");
@@ -18,13 +18,13 @@ function App() {
   };
 
   const handleAdd = () => {
-    if (num >= 0 && num <= 100) {
+    if (num >= 0 && num < 100) {
       setNum(num + 2);
     }
   };
 
   const handleDivide = () => {
-    if (num <= 0) return;
+    if (num <= 0) alert("0이하일 때는 계산 할 수 없습니다.");
     else if (num > 100) return;
     const newNum = num / 2;
     setNum(newNum);
