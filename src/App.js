@@ -17,10 +17,11 @@ function App() {
       <div className="calculate">
         <button onClick={handleAdd}>+</button>
         <button>-</button>
+        <button>*</button>
         <button>/</button>
       </div>
     </div>
   );
 }
-
+}
 export default App;
