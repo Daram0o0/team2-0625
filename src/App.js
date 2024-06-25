@@ -3,6 +3,12 @@ import "./App.css";
 
 function App() {
   const [num, setNum] = useState(0);
+
+  const handleDivide = () => {
+    const newNum = num / 2;
+    setNum(newNum);
+  };
+
   return (
     <div className="App">
       <div>
@@ -12,7 +18,7 @@ function App() {
         <button>+</button>
         <button>-</button>
         <button>*</button>
-        <button>/</button>
+        <button onClick={handleDivide}>/</button>
       </div>
     </div>
   );
