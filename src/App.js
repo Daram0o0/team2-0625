@@ -5,7 +5,9 @@ function App() {
   const [num, setNum] = useState(0);
 
   const handleAdd = () => {
-    setNum(num + 2);
+    if(num >= 0 && num <= 100){
+      setNum(num + 2);
+    }
   };
 
   return (
