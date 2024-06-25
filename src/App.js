@@ -5,7 +5,8 @@ function App() {
   const [num, setNum] = useState(0);
 
   const multiple = () => {
-    setNum(num * 2);
+    if (num > 0 && num < 50) {
+      setNum(num * 2);
   };
 
   return (
