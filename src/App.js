@@ -8,7 +8,7 @@ function App() {
     if(num >= 0 && num <= 100){
       setNum(num + 2); 
     }
-
+  }
   return (
     <div className="App">
       <div>
@@ -22,6 +22,5 @@ function App() {
       </div>
     </div>
   );
-}
 }
 export default App;
