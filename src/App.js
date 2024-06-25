@@ -7,6 +7,9 @@ function App() {
   const multiple = () => {
     if (num > 0 && num < 50) {
       setNum(num * 2);
+    } else {
+      alert("*버튼을 실행할 수 없습니다.");
+    }
   };
 
   return (
