@@ -3,6 +3,10 @@ import "./App.css";
 
 function App() {
   const [num, setNum] = useState(0);
+  const handleMinus = () => {
+    setNum(num - 2);
+  };
+
   return (
     <div className="App">
       <div>
@@ -10,7 +14,7 @@ function App() {
       </div>
       <div className="calculate">
         <button>+</button>
-        <button>-</button>
+        <button onClick={handleMinus}>-</button>
         <button>*</button>
         <button>/</button>
       </div>
